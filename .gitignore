@@ -1,0 +1,6 @@
+# Directories
+rsconnect
+
+# Files
+.RData
+.Rhistory

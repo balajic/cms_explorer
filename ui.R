@@ -12,10 +12,11 @@ tabHCP <- read.csv("HCP.csv",header=TRUE)
 #unique(tabHCP[,24])
 
 #companyList <- unique(tabHCP[,24])
-companyList <- distinct(tabHCP["Submitting_Applicable_Manufacturer_or_Applicable_GPO_Name"],Submitting_Applicable_Manufacturer_or_Applicable_GPO_Name)
+
+companyList <- data.frame(lapply(distinct(tabHCP["Submitting_Applicable_Manufacturer_or_Applicable_GPO_Name"]), as.character), stringsAsFactors=FALSE)
 
 #drugList   <-  unique(tabHCP[,47])
-drugList   <-  distinct(tabHCP["Name_of_Associated_Covered_Drug_or_Biological1"],Name_of_Associated_Covered_Drug_or_Biological1)
+drugList   <-  data.frame(lapply(distinct(tabHCP["Name_of_Associated_Covered_Drug_or_Biological1"]), as.character), stringsAsFactors=FALSE)
 
 dashboardPage(
   dashboardHeader(title = "Filter"),

@@ -1,6 +1,9 @@
-# Sriramajayam
-#install.packages('dplyr')
-# colnames(tab)
+#  Quick help
+# install.packages('dplyr')
+# colnames(tabHCP)
+# unique(tabHCP[,24])
+#
+
 library(shiny)
 library(shinydashboard)
 library(shinyjs)
@@ -8,8 +11,6 @@ library(DT)
 library(jsonlite)
 library(dplyr)
 tabHCP <- read.csv("HCP.csv",header=TRUE)
-#colnames(tabHCP)
-#unique(tabHCP[,24])
 
 #companyList <- unique(tabHCP[,24])
 
